@@ -3,7 +3,17 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
+  role:{
+    type:String,
+    enum:["Kitchen","Table"],
+    default:"Table"
+  },
+  order: {
+    type: Boolean,
+    default: false
+  },
+  activeOrder: {type:Schema.Types.ObjectId, ref:"Order"}
 }, {
   timestamps: {
     createdAt: 'created_at',

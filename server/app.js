@@ -10,7 +10,9 @@ require('./configs/passport.config')(app)
 require('./configs/view-engines.config')(app)
 
 // Routes
-app.use('/', require('./routes/index'))
-app.use('/auth', require('./routes/auth'))
+app.use('/api', require('./routes/index'))
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/menu',require('./routes/menu'))
+app.use('/api/order',require('./routes/order'))
       
 module.exports = app;
