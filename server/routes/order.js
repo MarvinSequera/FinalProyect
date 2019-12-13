@@ -46,27 +46,26 @@ const requireDish =req.body
                            .then(user => {
                                Order.findByIdAndUpdate(user.activeOrder, {$addToSet: {dishRequested: theRequest._id}}, {new:true})
                                .then(order => {
-                                   req.json(order)
+                                   res.json(order)
                                })
                                .catch(err=> console.log(err))
                            })
-                          
-
                        })
                       .catch(err => console.log("error al crea la peticion de plato",err))
-
-
             }
         })
-    
-
-
-
-    // console.log(req.user)
-    // const requireDish =req.body
-    // requestDish.create(requireDish)
-    // .then(theRequest => res.json(theRequest))
-    // .catch(err => console.log("error al crea la peticion de plato",err))
+})
+router.get('/review',(req,res)=>{
+    Order.find(req.user.activeOrder)
+    .populate("user")
+    .populate("dishRequested")
+    .then(theOrder =>res.json(theOrder))
+    .catch(err => console.log("error al recuperar la orden en proceso",err))
+})
+router.post('/delete/:id',(req,res)=>{
+    requestDish.findByIdAndDelete(req.params.id)
+    .then(eliminate => console.log("eliminada",eliminate))
+    .catch(err=>console.log("error elimiando el plato",err))
 })
 
 module.exports = router
