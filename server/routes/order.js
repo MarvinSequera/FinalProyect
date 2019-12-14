@@ -67,5 +67,16 @@ router.post('/delete/:id',(req,res)=>{
     .then(eliminate => console.log("eliminada",eliminate))
     .catch(err=>console.log("error elimiando el plato",err))
 })
+router.get('/edit/:id',(req,res)=>{
+    console.log(req.params.id)
+    requestDish.findById(req.params.id)
+    .then(theRequestDish => res.json(theRequestDish))
+    .catch(err => console.log("error al recuperar el plato requerido de la BBDD ", err))
+})
+router.post('/edit/:id',(req,res)=>{
+    requestDish.findOneAndReplace({_id:req.params.id},req.body)
+    .then(x=> console.log("actualizado el plato",x))
+    .catch(err => console.log("error al editar el plato",err))
+})
 
 module.exports = router
