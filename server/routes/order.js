@@ -56,11 +56,15 @@ const requireDish =req.body
         })
 })
 router.get('/review',(req,res)=>{
+    console.log(req.user.activeOrder)
+    req.user.activeOrder ?
     Order.find(req.user.activeOrder)
     .populate("user")
     .populate("dishRequested")
     .then(theOrder =>res.json(theOrder))
     .catch(err => console.log("error al recuperar la orden en proceso",err))
+    :
+    console.log("Entro")
 })
 router.post('/delete/:id',(req,res)=>{
     requestDish.findByIdAndDelete(req.params.id)
