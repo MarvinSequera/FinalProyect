@@ -1,6 +1,5 @@
 const express      = require('express')
 const path         = require('path');
-const hbs          = require('hbs');
 
 module.exports = app => {
         app.use(require('node-sass-middleware')({
@@ -14,14 +13,3 @@ app.set('views', path.join(__dirname,'..', 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname,'..', 'public')));
 
-
-hbs.registerHelper('ifUndefined', (value, options) => {
-  if (arguments.length < 2)
-      throw new Error("Handlebars Helper ifUndefined needs 1 parameter");
-  if (typeof value !== undefined ) {
-      return options.inverse(this);
-  } else {
-      return options.fn(this);
-  }
-})
-}
