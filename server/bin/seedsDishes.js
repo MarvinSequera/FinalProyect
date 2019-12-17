@@ -2,7 +2,7 @@ require('dotenv').config()
 const mongoose = require("mongoose")
 const Dish = require('../models/Dish.model')
 
-mongoose.connect(`mongodb://localhost/finalProyect`)
+mongoose.connect(`${process.env.DB}`)
 Dish.collection.drop()
 
 const Dishes = [
