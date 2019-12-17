@@ -82,5 +82,12 @@ router.post('/edit/:id',(req,res)=>{
     .then(x=> console.log("actualizado el plato",x))
     .catch(err => console.log("error al editar el plato",err))
 })
+router.get('/kitchen', (req,res)=>{
+    Order.find({confirm:true})
+    .populate('user')
+    .populate("dishRequested")
+    .then(allOrders => res.json(allOrders))
+    .catch(err => console.log("error al recuperar las orden a cocinar",err))
+})
 
 module.exports = router

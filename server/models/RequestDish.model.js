@@ -15,6 +15,11 @@ const requestSchema = new Schema({
         enum:["Entrante","Principal","Acompañante","Bebida","Postre"]
     },
 
+    ready:{
+        type:Boolean,
+        default:false
+    },
+
     // user:{type:Schema.Types.ObjectId, ref:"User"},
 
 },

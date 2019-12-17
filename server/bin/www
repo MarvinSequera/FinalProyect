@@ -21,7 +21,12 @@ app.use((err, req, res, next) => {
   }
 });
 
+
 let server = http.createServer(app);
+
+const io = require('socket.io')(server)
+
+require("../configs/socketConfig.js")(io)
 
 server.on('error', error => {
   if (error.syscall !== 'listen') { throw error }
@@ -44,3 +49,5 @@ server.on('error', error => {
 server.listen(process.env.PORT, () => {
   console.log(`Listening on http://localhost:${process.env.PORT}`);
 });
+
+module.exports = server

@@ -7,6 +7,10 @@ const orderSchema = new Schema({
     ready:{
         type:Boolean,
         default:false
+    },
+    confirm:{
+        type:Boolean,
+        default:false
     }
 },
 {
