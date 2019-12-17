@@ -11,7 +11,7 @@ io.on("connection",socket =>{
     console.log("socket connected")
 
     socket.on("ordersConfirmed", order => {
-        // console.log(order)
+        console.log(order)
         Order.findById(order)
         .populate('user')
         .populate('dishRequested')
