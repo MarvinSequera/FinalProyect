@@ -56,7 +56,7 @@ const requireDish =req.body
         })
 })
 router.get('/review',(req,res)=>{
-    console.log(req.user.activeOrder)
+    //console.log(req.user.activeOrder)
     req.user.activeOrder ?
     Order.find(req.user.activeOrder)
     .populate("user")
@@ -82,12 +82,11 @@ router.post('/edit/:id',(req,res)=>{
     .then(x=> console.log("actualizado el plato",x))
     .catch(err => console.log("error al editar el plato",err))
 })
-router.get('/kitchen', (req,res)=>{
-    Order.find({confirm:true})
-    .populate('user')
-    .populate("dishRequested")
-    .then(allOrders => res.json(allOrders))
-    .catch(err => console.log("error al recuperar las orden a cocinar",err))
+router.post('/ready',(req,res)=>{
+    console.log(req.user._id)
+    User.findByIdAndUpdate(req.user._id,{$set: {activeOrder:undefined, order:false}},{new:true})
+    .then(theUser => console.log("Actualizado el usuario", theUser))
+    .catch(err => ("error al actualizar el usuario el activeOrder y order",err))
 })
 
 module.exports = router
