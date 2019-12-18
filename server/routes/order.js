@@ -88,5 +88,10 @@ router.post('/ready',(req,res)=>{
     .then(theUser => console.log("Actualizado el usuario", theUser))
     .catch(err => ("error al actualizar el usuario el activeOrder y order",err))
 })
+router.get('/user',(req,res) =>{
+    User.findById(req.user._id)
+    .then(theUser => res.json(theUser.activeOrder))
+    .catch(err=> console.log("error al recuperar al usuario",err))
+})
 
 module.exports = router
