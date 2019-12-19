@@ -11,7 +11,7 @@ const dishSchema = new Schema({
     ingredients:[Object],
     category:{
         type:String,
-        enum:["Entrante","Principal","Acompañante","Bebida","Postre"]
+        enum:["first","main","side","drink","dessert"]
     }
 },
 {
