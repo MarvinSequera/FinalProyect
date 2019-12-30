@@ -51,31 +51,31 @@ const Dishes = [
     {
         name:"Hamburguesa con Queso",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331679/ironHack2019/hamburguesa-con-queso_zslifi.jpg',
-        ingredients:[{lechuga:1},{tomate:1},{pepinillo:1},{cebolla:1},{mayonesa:1},{mostasa:1},{ketchup:1},{queso:1},{carne:1}],
+        ingredients:[{lechuga:"Con"},{tomate:"Con"},{pepinillo:"Con"},{cebolla:"Con"},{mayonesa:"Con"},{mostaza:"Con"},{ketchup:"Con"},{queso:"Con"},{carne:"Con"}],
         category:"main"
     },
     {
         name:"Hamburguesa con Queso y Tocino",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/hamburguesa-bacon_kwjume.jpg',
-        ingredients:[{lechuga:1},{tomate:1},{pepinillo:1},{cebolla:1},{mayonesa:1},{mostasa:1},{ketchup:1},{queso:1},{carne:1},{tocineta:1}],
+        ingredients:[{lechuga:"Con"},{tomate:"Con"},{pepinillo:"Con"},{cebolla:"Con"},{mayonesa:"Con"},{mostaza:"Con"},{ketchup:"Con"},{queso:"Con"},{carne:"Con"},{tocineta:"Con"}],
         category:"main"
     },
     {
         name:"Hamburguesa de Pechuga de Pollo",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331679/ironHack2019/hamburguesa-de-pollo_ij6b69.jpg',
-        ingredients:[{lechuga:1},{tomate:1},{pepinillo:1},{cebolla:1},{mayonesa:1},{mostasa:1},{ketchup:1},{pollo:1}],
+        ingredients:[{lechuga:"Con"},{tomate:"Con"},{pepinillo:"Con"},{cebolla:"Con"},{mayonesa:"Con"},{mostaza:"Con"},{ketchup:"Con"},{pollo:"Con"}],
         category:"main"
     },
     {
         name:"Pizza Margarita",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331677/ironHack2019/pizza-margarita_hepw3j.jpg',
-        ingredients:[{oregano:1},{ajo:1},{queso:1}],
+        ingredients:[{oregano:"Con"},{ajo:"Con"},{queso:"Con"}],
         category:"main"
     },
     {
         name:"Pizza de Peperoni",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331679/ironHack2019/Pizza-con-pepperoni_ujlttv.jpg',
-        ingredients:[{oregano:1},{ajo:1},{queso:1},{peperoni:1}],
+        ingredients:[{oregano:"Con"},{ajo:"Con"},{queso:"Con"},{peperoni:"Con"}],
         category:"main"
     },
     {
@@ -99,7 +99,7 @@ const Dishes = [
     {
         name:"Ensalada Cesar",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/cesar_cey4gc.jpg',
-        ingredients:[{lechuga:1},{queso:1},{salsa_anchoas:1},{tomates_cherry:1},{rucula:1},{pan:1}],
+        ingredients:[{lechuga:"Con"},{queso:"Con"},{salsa_anchoas:"Con"},{tomates_cherry:"Con"},{rucula:"Con"},{pan:"Con"}],
         category:"side"
     },
     {
@@ -135,37 +135,37 @@ const Dishes = [
     {
         name:"Galleta y Helado",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/cookie-y-helado_i5rmv7.jpg',
-        ingredients:[{vainilla:1},{fresa:0},{chocolate:0}],
+        ingredients:[{vainilla:"Con"},{fresa:"Sin"},{chocolate:"Sin"}],
         category:"dessert"
     },
     {
         name:"Cheese Cake",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/tarta-de-queso_b8nzqw.jpg',
-        ingredients:[{sirop_Chocolate:1},{sirop_Fresa:0}],
+        ingredients:[{sirop_Chocolate:"Con"},{sirop_Fresa:"Sin"}],
         category:"dessert"
     },
     {
         name:"Tarta de Zanahoria",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/tarta-zanahoria_pwoxik.jpg',
-        ingredients:[{lacasitos:1},{queso_crema:1}],
+        ingredients:[{lacasitos:"Con"},{queso_crema:"Con"}],
         category:"dessert"
     },
     {
         name:"Brownie y Helado",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331677/ironHack2019/brownie-con-helado_oetnp8.jpg',
-        ingredients:[{vainilla:1},{fresa:0},{chocolate:0}],
+        ingredients:[{vainilla:"Con"},{fresa:"Sin"},{chocolate:"Sin"}],
         category:"dessert"
     },
     {
         name:"Yogurt,Frutos secos y Miel",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/yogur_ji6vv2.jpg',
-        ingredients:[{almendras:1},{cacahuates:1},{anacardos:1},{nueces:1},{miel:1}],
+        ingredients:[{almendras:"Con"},{cacahuates:"Con"},{anacardos:"Con"},{nueces:"Con"},{miel:"Con"}],
         category:"dessert"
     },
     {
         name:"Tortitas con sirope y nata montada",
         image:'https://res.cloudinary.com/marvinsequera/image/upload/v1576331678/ironHack2019/tortitas_jdedq2.jpg',
-        ingredients:[{sirop_Chocolate:1},{sirop_Fresa:0}],
+        ingredients:[{sirop_Chocolate:"Con"},{sirop_Fresa:"Sin"}],
         category:"dessert"
     }
 ]
